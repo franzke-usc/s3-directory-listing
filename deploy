@@ -1,0 +1,14 @@
+#!/bin/bash
+
+docker run --name deploy -v $(pwd)/s3-directory-listing:/opt/s3-directory-listing --rm -it node:14 /bin/bash
+
+
+# apt-get update && apt install -y nodejs python3-pip jq ca-certificates
+# pip3 install awscli --upgrade
+# npm install -g serverless serverless-external-s3-event serverless-webpack
+# aws configure
+#
+# cd /opt/s3-directory-listing
+# yarn install
+# serverless deploy
+# serverless s3deploy
