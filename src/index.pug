@@ -27,7 +27,7 @@ html(lang='en')
               li.breadcrumb-item.active= item.name
             else
               li.breadcrumb-item
-                a(href=item.path)= item.name
+                a(href=item.path + '/')= item.name
 
       .table-responsive
         table#bs-table.table.table-hover
@@ -45,14 +45,14 @@ html(lang='en')
               tr
                 td.text-left
                   i.fa.fa-folder
-                  a(href=pathToUp)
+                  a(href=pathToUp + '/')
                     strong ..
                 td(colspan=2)
             each directory in directories
               tr
                 td.text-left
                   i.fa.fa-folder
-                  a(href=directory)
+                  a(href=directory + '/')
                     strong= directory
                 td(colspan=2)
             each file in files
